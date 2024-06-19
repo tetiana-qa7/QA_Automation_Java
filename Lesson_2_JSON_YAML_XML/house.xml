@@ -24,14 +24,16 @@
         </bedroom>
     </rooms>
     <owners>
-        <husband>
+        <owner>
             <name>Alex</name>
             <age>34</age>
-        </husband>
-         <wife>
+            <maritalTitle>husband</maritalTitle>
+        </owner>
+        <owner>
             <name>Amy</name>
             <age>34</age>
-        </wife>
+            <maritalTitle>wife</maritalTitle>
+        </owner>
     </owners>
 </house>
           
