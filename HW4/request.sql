@@ -9,5 +9,5 @@ SELECT VisitDate, Reason, Diagnosis, Treatment, Cats.Name, Breed FROM Cats
 JOIN Visits
 ON Cats.CatID = Visits.CatID
 JOIN MedicalRecords
-ON Visits.VisitID = MedicalRecords.`VisitID`
+ON Visits.VisitID = MedicalRecords.VisitID
 WHERE visitDate > 2024-03-01;
