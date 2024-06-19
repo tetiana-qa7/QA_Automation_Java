@@ -1,0 +1,39 @@
+<house>
+    <rooms>
+        <kitchen>
+            <table>1</table>
+            <chairs>5</chairs>
+            <oven>1</oven>
+            <cleaned>true</cleaned>
+            <state>redecorated</state>
+        </kitchen>
+        <living_room>
+            <table>0</table>
+            <chairs>2</chairs>
+            <TV_set>1</TV_set>
+            <cleaned>false</cleaned>
+            <state>shabby</state>
+        </living_room>
+        <bedroom>
+            <table>0</table>
+            <chairs>0</chairs>
+            <bed>1</bed>
+            <TV_set>1</TV_set>
+            <cleaned>true</cleaned>
+            <state>shabby</state>
+        </bedroom>
+    </rooms>
+    <owners>
+        <owner>
+            <name>Alex</name>
+            <age>34</age>
+            <maritalTitle>husband</maritalTitle>
+        </owner>
+        <owner>
+            <name>Amy</name>
+            <age>34</age>
+            <maritalTitle>wife</maritalTitle>
+        </owner>
+    </owners>
+</house>
+          

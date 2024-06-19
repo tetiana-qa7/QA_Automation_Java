@@ -1,0 +1,29 @@
+---
+house:
+  rooms:
+    kitchen:
+      table: 1
+      chairs: 5
+      oven: 1
+      cleaned: true
+      state: redecorated
+    living_room:
+      table: 0
+      chairs: 2
+      TV_set: 1
+      cleaned: false
+      state: shabby
+    bedroom:
+      table: 0
+      chairs: 0
+      bed: 1
+      TV_set: 1
+      cleaned: true
+      state: shabby
+  owners:
+    husband:
+      name: Alex
+      age: 34
+    wife:
+      name: Amy
+      age: 35
