@@ -9,7 +9,7 @@ public class ChoiceOfDish {
      */
     public static void main(String[] args) {
         int dishType;
-        String dish = "a";
+        String dish = "";
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Which type of dish do you want. Choose one of the options: 1 - appetizer, 2 - main course, 3 - dessert, 4 -drink");
