@@ -16,11 +16,11 @@ int searchID = 54321;
 
     public static void main(String[] args) {
         int[] studentIDs = {12345, 67890, 54321, 98765, 24680};
-        int searchID = 54321;
+        int searchID = 67890;
         boolean isFound = false;
 
-        for (int i : studentIDs) {
-            if (i == searchID) {
+        for (int studentId : studentIDs) {
+            if (studentId == searchID) {
                 System.out.println("This student is found");
                 isFound = true;
                 break;
@@ -34,16 +34,15 @@ int searchID = 54321;
         //for
 
 
-        for (int j = 0; j < studentIDs.length; j++) {
-            if (studentIDs[j] == searchID) {
-                System.out.println("This student is found");
+        for (int i = 0; i < studentIDs.length; i++) {
+            if (studentIDs[i] == searchID) {
+                System.out.println("----This student is found");
                 isFound = true;
                 break;
             }
-            j++;
         }
         if (!isFound) {
-            System.out.println("This student is not found");
+            System.out.println("----This student is not found");
         }
 
     }
