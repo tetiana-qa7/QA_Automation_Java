@@ -13,16 +13,14 @@ public class Main {
             firstCharacter.displayStatus();
             secondCharacter.displayStatus();
 
+            firstCharacter.equip("Sword");
+            secondCharacter.equip("Shield");
+
             secondCharacter.attack(secondCharacter);
             firstCharacter.displayStatus();
             secondCharacter.displayStatus();
         }
-
-        firstCharacter.equip("Sword");
-        secondCharacter.equip("Shield");
-        System.out.println("==============");
-        firstCharacter.displayStatus();
-        secondCharacter.displayStatus();
+        
 
     }
 }
