@@ -2,37 +2,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Character First = new Character();
-        Character Second = new Character();
-
-        First.name = "First";
-        First.defence = 3;
-        First.strength = 1;
-        First.health = 100;
-
-        Second.name = "Second";
-        Second.defence = 0;
-        Second.strength = 2;
-        Second.health = 150;
+        Character firstCharacter = new Character("First", 100, 1, 3);
+        Character secondCharacter = new Character("Second", 150, 2, 0);
 
 
-        System.out.println(Character.CHARACTER_COUNT);
+        System.out.println(Character.characterCount);
 
-        while (First.isAlive() && Second.isAlive()){
-            First.attack(Second);
-            First.displayStatus();
-            Second.displayStatus();
+        while (firstCharacter.isAlive() && secondCharacter.isAlive()){
+            firstCharacter.attack(secondCharacter);
+            firstCharacter.displayStatus();
+            secondCharacter.displayStatus();
 
-            Second.attack(First);
-            First.displayStatus();
-            Second.displayStatus();
+            secondCharacter.attack(secondCharacter);
+            firstCharacter.displayStatus();
+            secondCharacter.displayStatus();
         }
 
-        First.equip("Sword");
-        Second.equip("Shield");
+        firstCharacter.equip("Sword");
+        secondCharacter.equip("Shield");
         System.out.println("==============");
-        First.displayStatus();
-        Second.displayStatus();
+        firstCharacter.displayStatus();
+        secondCharacter.displayStatus();
 
     }
 }

@@ -1,46 +1,54 @@
 public class Character {
-    String name;
-    int health;
-    int strength;
-    int defence;
-    static int CHARACTER_COUNT;
+     String name;
+     int health;
+     int strength;
+     int defence;
+     static int characterCount;
 
+ public Character(String name, int health, int strength, int defence){
+     this.name = name;
+     this.health = health;
+     this.strength = strength;
+     this.defence = defence;
+     characterCount++;
+ }
 
-
-    public Character(){
-        CHARACTER_COUNT++;
-    }
     void attack (Character otherCharacter){
-        if (strength - otherCharacter.defence >= 0) {
-            otherCharacter.health = otherCharacter.health - (strength - otherCharacter.defence);
+        int damage = strength - otherCharacter.defence;
+        if ( damage >= 0) {
+            otherCharacter.takeDamage(damage);
         }
         else {
             otherCharacter.health = otherCharacter.health - 0;
         }
         // Шкода, яка завдається, дорівнює силі атакуючого мінус захист захищаючого (але не менше 0).
+        //void attack (Character otherCharacter){
+          //  if (strength - otherCharacter.defence >= 0) {
+          //      otherCharacter.health = otherCharacter.health - (strength - otherCharacter.defence);
+          //  }
+          //  else {
+           //     otherCharacter.health = otherCharacter.health - 0;
+          //  }
 
     }
 
     void takeDamage(int damage){
-        health-=damage;
+     health = health - damage;
     }
 
     boolean isAlive(){
-        if (health > 0){
-            return true;
-        }
-        else return false;
+        return health > 0;
     }
 
-    void equip (String tool){
+   void equip (String tool){
         if (tool.equalsIgnoreCase("sword")){
-            strength+=5;
+           strength+=5;
         }
         else if (tool.equalsIgnoreCase("shield")){
             defence+=5;
         }
         else{
-            System.out.println("We don't have this tool");
+            System.err.println("We don't have this tool");
         }
     }
 
@@ -50,6 +58,9 @@ public class Character {
                 + " Strength of this character = " + strength
                 + " Defense of this character = " + defence);
     }
+
+
+
 
 
 
