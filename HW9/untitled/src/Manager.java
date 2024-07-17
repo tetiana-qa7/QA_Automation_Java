@@ -29,4 +29,11 @@ public class Manager extends Employee {
 
     }
 
+    //априклад Manager зможе мати додаткові методи, які приймають об'єкт типу Employee на вхід і
+            //"змушують" робити його якусь роботу, або методи, які дозволяють керувати офісом
+
+    public void giveInstructions(Employee employee){
+        System.out.println("I five instruction to " + employee.getName());
+    }
+
 }

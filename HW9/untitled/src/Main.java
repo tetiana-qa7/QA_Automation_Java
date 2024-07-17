@@ -12,14 +12,18 @@ public class Main {
         Manager managerInvalid = new Manager("Alex", 10, 295950.0);
         managerInvalid.setAge(0);
 
+
         Developer developer1 = new Developer("Vitalii", 29, 39955005.9);
         Developer developer2 = new Developer("Olena", 40, 5890606.0);
         Developer developerInvalid = new Developer("Olena", 40, 100000.0);
         developerInvalid.setSalary(0);
+        manager1.giveInstructions(developer1);
 
 
         Designer designer1 = new Designer("Artem", 28, 39995995.9);
         Designer designer2 = new Designer("Olga", 45, 588590.9);
+
+
 
 
 
