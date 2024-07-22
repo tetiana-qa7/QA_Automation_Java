@@ -5,9 +5,11 @@
 а також ім*я та телефонний номер хазяїна котика (все саме в такому порядку) */
 
 
-SELECT VisitDate, Reason, Diagnosis, Treatment, Cats.Name, Breed FROM Cats
+SELECT VisitDate, Reason, Diagnosis, Treatment, Cats.Name AS catName, Breed, Owners.name AS ownerName, Owners.phone  FROM Owners
+JOIN Cats
+ON Owners.OwnerID = Cats.OwnerID
 JOIN Visits
 ON Cats.CatID = Visits.CatID
 JOIN MedicalRecords
 ON Visits.VisitID = MedicalRecords.VisitID
-WHERE visitDate > 2024-03-01;
+WHERE visitDate > '2024-03-01';
