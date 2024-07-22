@@ -4,13 +4,14 @@ public class Manager extends Employee {
 
     //NEW!!!!!
 
-    private ArrayList<Employee> subordinates;
+    private ArrayList<Employee> subordinates = new ArrayList<>() ;
+
 
     public ArrayList<Employee> getSubordinates() {
         return subordinates;
     }
 
-    public void setSubordinates(Employee subordinate){
+    public void addSubordinate(Employee subordinate){
         subordinates.add(subordinate);
     }
     //NEW!!!!!

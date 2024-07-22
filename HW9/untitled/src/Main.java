@@ -23,11 +23,12 @@ public class Main {
         Designer designer1 = new Designer("Artem", 28, 39995995.9);
         Designer designer2 = new Designer("Olga", 45, 588590.9);
 
-        manager1.setSubordinates(developer1);
+        manager1.addSubordinate(developer1);
 
 
 
         Employee[] employees = {manager1, manager2, managerInvalid, developer1, developer2, designer1, designer2};
+
 
         for (int i = 0; i < employees.length; i++){
             employees[i].work();
