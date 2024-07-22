@@ -22,8 +22,7 @@ public class Developer extends Employee {
         System.out.println("This is my role. I am a DEVELOPER. It's my repsonsibility to implement tasks and inform management about possible delays");
     }
 
-    public void describeRole(String extraInfo, int subordinates){
+    public void describeRole(String extraInfo){
         System.out.println("My role is Developer. I have the following responsibilities:  " + extraInfo);
-        System.out.println("I have  " + subordinates + " subordinates");
     }
 }

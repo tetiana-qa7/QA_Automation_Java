@@ -49,7 +49,7 @@ public abstract class Employee {
     protected abstract void takeBreak();
     protected abstract void performJob();
     protected abstract void describeRole();
-    protected abstract void describeRole(String extraInfo,  int subordinates);
+    protected abstract void describeRole(String extraInfo);
 
 
 

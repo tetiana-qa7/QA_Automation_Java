@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Designer extends Employee{
+
+
     Designer(String name, int age, double salary) {
         super(name, age, salary);
     }
@@ -21,9 +25,9 @@ public class Designer extends Employee{
         System.out.println("This is my role. I am a DESIGNER. It's my repsonsibility to make sure that we are on the same page with the stakeholders");
     }
 
-    public void describeRole(String extraInfo, int subordinates){
-        System.out.println("My role is DESIGNER. I have the following responsibilities:  " + extraInfo);
-        System.out.println("I have  " + subordinates + " subordinates");
+    public void describeRole(String extraInfo){
+       System.out.println("My role is DESIGNER. I have the following responsibilities:  " + extraInfo);
     }
+
 
 }

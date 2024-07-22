@@ -23,7 +23,7 @@ public class Main {
         Designer designer1 = new Designer("Artem", 28, 39995995.9);
         Designer designer2 = new Designer("Olga", 45, 588590.9);
 
-
+        manager1.setSubordinates(developer1);
 
 
 
@@ -33,8 +33,12 @@ public class Main {
             employees[i].work();
             employees[i].performJob();
             employees[i].describeRole();
+            employees[i].describeRole("Test responsibility");
             System.out.println("---");
         }
+
+
+
 
     }
 }

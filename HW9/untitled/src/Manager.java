@@ -1,4 +1,19 @@
+import java.util.ArrayList;
+
 public class Manager extends Employee {
+
+    //NEW!!!!!
+
+    private ArrayList<Employee> subordinates;
+
+    public ArrayList<Employee> getSubordinates() {
+        return subordinates;
+    }
+
+    public void setSubordinates(Employee subordinate){
+        subordinates.add(subordinate);
+    }
+    //NEW!!!!!
     Manager(String name, int age, double salary) {
         super(name, age, salary);
     }
@@ -23,11 +38,12 @@ public class Manager extends Employee {
 
     }
 
-    public void describeRole(String extraInfo, int subordinates){
+    //!!NEW
+    public void describeRole(String extraInfo){
         System.out.println("My role is manager. I have the following responsibilities:  " + extraInfo);
-        System.out.println("I have  " + subordinates + " subordinates");
-
+        System.out.println("I have  " + subordinates.size() + " subordinates");
     }
+    //!NEW
 
     //априклад Manager зможе мати додаткові методи, які приймають об'єкт типу Employee на вхід і
             //"змушують" робити його якусь роботу, або методи, які дозволяють керувати офісом
