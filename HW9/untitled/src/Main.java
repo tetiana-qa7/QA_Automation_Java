@@ -35,6 +35,7 @@ public class Main {
             employees[i].performJob();
             employees[i].describeRole();
             employees[i].describeRole("Test responsibility");
+            employees[i].takeBreak();
             System.out.println("---");
         }
 
