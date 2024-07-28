@@ -10,54 +10,42 @@ public class Main {
         // Викличте метод для "прочитування повідомлень" від імені користувачів,
         // які отримали повідомлення та перевірте статус цих повідомлень після прочитання.
 
-        User tania = new User("Tania");
-        User artem = new User("Artem");
-        User mum = new User("Mum");
+        User alex = new User("Alex");
+        User anna = new User("Anna");
+        User alice = new User("Alice");
 
-        tania.addContact("0999999999", artem);
-        tania.addContact("099994444", mum); // Tania - 2 contacts
-        artem.addContact("099999554", tania);
-
-
-        Message firstMessage = new Message("Hello, it's me");
-        Message secondMessage = new Message("Bye Bye");
-        Message thirdMessage = new Message("Spam this is spam");
-        Message fourthMessage = new Message("enemy");
-        Message fifthMessage = new Message("test");
-        Message six = new Message("new text");
-
-        tania.sendMessage(firstMessage, artem);
-        artem.getMessage(firstMessage);
-        artem.readMesage(firstMessage);// READ
-
-        tania.sendMessage(secondMessage, mum);
-        tania.sendMessage(thirdMessage, artem);
-        tania.sendMessage(fourthMessage, artem);
-
-        tania.getUserMessages();
-
-        tania.getUserContacts();
-        artem.getUserContacts();
-
-        tania.deleteContact("099994444", mum);
-
-        tania.deleteMessageSpam(thirdMessage);
-        tania.getUserMessages();
-
-        tania.deleteMessage(fourthMessage);
-        tania.getUserMessages();
-
-        tania.sendMessage(secondMessage, artem);
-        artem.getMessage(secondMessage);//RECEIVED
-
-        tania.sendMessage(fifthMessage, artem);
-        artem.getMessage(fifthMessage);//RECEIVED
-
-        tania.sendMessage(six, artem); // SENT
+        alex.addContact("0999999999", anna);
+        alice.addContact("099999554", alex);
 
 
+        alex.sendMessage("Hello, it's me, Alex", anna);
+        anna.readLastMessage();// READ
+        //anna.readLastMessage();// exception, no unread messages left
+        //alex.sendMessage("hello, allice", alice);// exception, not in the contacts
 
-       tania.filterMessages();
+        alex.sendMessage("I didn't get answer", anna);
+        alex.addContact("099999", alice);
+        alex.sendMessage("Hello, it's me, Alex", alice);
+
+
+        alex.getUserMessages();
+
+        alex.getUserContacts();
+        alice.getUserContacts();
+
+        alex.deleteContact("0999999999");
+        //alex.deleteContact("94904");//exception
+        //alex.deleteContact(anna);// exception
+
+        alex.sendMessage("Spam .....", alice);
+        alice.deleteMessageSpam();
+        alice.getUserMessages();
+
+        alex.getUserMessages();
+
+        alex.sortMessages();
+        alice.filterMessages(MessageStatuses.RECEIVED);
+
 
 
 

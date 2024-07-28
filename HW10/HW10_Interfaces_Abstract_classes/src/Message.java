@@ -1,39 +1,42 @@
 import java.util.Comparator;
 import java.util.Collections;
 
-public class Message implements MessageInterface{
+public class Message implements MessageInterface {
     private User sender;
     private User receiver;
     private String messageText;
-
     private MessageStatuses status;
 
-    Message(String messageText){
+
+    Message(String messageText, User sender, User receiver) {
         this.messageText = messageText;
+        this.sender = sender;
+        this.receiver = receiver;
     }
 
-
-    public String getSender() {
+    @Override
+    public String getSenderName() {
         return sender.getUserName();
     }
 
-    public void setSender(User sender){
+    @Override
+    public void setSender(User sender) {
         this.sender = sender;
     }
 
     @Override
-    public String getReceiver() {
+    public String getReceiverName() {
         return receiver.getUserName();
     }
 
-
-    public void setReceiver(User receiver){
+    @Override
+    public void setReceiver(User receiver) {
         this.receiver = receiver;
     }
 
     @Override
     public String getMessage() {
-       return messageText;
+        return messageText;
     }
 
     @Override
@@ -43,17 +46,14 @@ public class Message implements MessageInterface{
 
     @Override
     public void setMessageStatus(MessageStatuses status) {
-            this.status = status;
+        this.status = status;
         System.out.println("New status set successfully");
     }
 
+
+    @Override
     public String toString() {
-        return "Message{" +
-                "content='" + messageText + '\'' +
-                ", status=" + status +
-                ", sender=" + getSender() +
-                ", receiver=" + getReceiver() +
-                '}';
+        return "Message{" + "content='" + messageText + '\'' + ", status=" + status + ", sender=" + getSenderName() + ", receiver=" + getReceiverName() + '}';
     }
 
 }

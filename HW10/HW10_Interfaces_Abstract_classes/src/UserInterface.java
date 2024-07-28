@@ -4,16 +4,18 @@ public interface UserInterface {
     // Визначте методи для додавання контакту, відправлення повідомлення, отримання повідомлення.
 
     public String getUserName();
+
+    public void setUserName(String name);
     public void getUserContacts();
     public void getUserMessages();
 
     public void addContact(String phone, User contact);
-    public void deleteContact(String phone, User contact);
+    public void deleteContact(String phone);
+    public void deleteContact(User contact);
 
 
-    public void sendMessage(Message message, User receiver);
-    public void getMessage(Message message);
+    public void sendMessage(String messageText, User receiver);
+    public void receiveMessage(Message message);
 
-    public void deleteMessage(Message message);
-    public void deleteMessageSpam(Message message);
+    public void deleteMessageSpam();
 }
