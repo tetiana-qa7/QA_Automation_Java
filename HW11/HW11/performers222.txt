@@ -1,0 +1,6 @@
+AlexX,Acrobatics,5
+AnnaX,Clown Acts,20
+SannaX,Fire Performance,10
+JuliaX,Hula Hooping,30
+OlehX,Juggling,15
+MaxX,Magic Arts,1
